@@ -1,12 +1,14 @@
 credentials_file = "gcp-key.json"
-project_id       = 	"multicloudproject-460511"
+
+project_id       = "multicloudproject-460511"
 region           = "asia-south1"
 zone             = "asia-south1-a"
 
-instance_name  = "my-terraform-instance"
-machine_type   = "e2-micro"
-image          = "debian-cloud/debian-11"
-disk_size      = 20
+instance_name    = "my-terraform-instance"
+machine_type     = "e2-micro"
+image            = "debian-cloud/debian-11"
+
+disk_size        = 20
 
 startup_script = <<EOF
 #! /bin/bash
