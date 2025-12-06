@@ -38,5 +38,9 @@ variable "credentials_file" {
 variable "startup_script" {
   description = "Startup script executed on VM boot"
   type        = string
-  default     = "echo Hello from Terraform VM"
+}
+
+variable "disk_size" {
+  description = "Disk size for the VM boot disk"
+  type        = number
 }
