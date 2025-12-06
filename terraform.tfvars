@@ -1,5 +1,5 @@
 credentials_file = "gcp-key.json"
-project_id       = "your-gcp-project-id"
+project_id       = 	"multicloudproject-460511"
 region           = "asia-south1"
 zone             = "asia-south1-a"
 
