@@ -1,50 +1,42 @@
-variable "credentials_file" {
-  description = "Path to GCP service account JSON file"
-  type        = string
-}
-
 variable "project_id" {
-  description = "GCP Project ID"
+  description = "GCP project ID"
   type        = string
 }
 
 variable "region" {
-  description = "GCP Region"
+  description = "Region where resources will be created"
   type        = string
-  default     = "asia-south1"
 }
 
 variable "zone" {
-  description = "GCP Zone"
+  description = "Zone where VM will run"
   type        = string
-  default     = "asia-south1-a"
 }
 
 variable "instance_name" {
-  description = "Name of the VM instance"
+  description = "Name of the Compute Engine instance"
   type        = string
 }
 
 variable "machine_type" {
-  description = "VM machine type"
+  description = "Machine type for VM"
   type        = string
   default     = "e2-medium"
 }
 
 variable "image" {
-  description = "OS image for boot disk"
+  description = "Boot image for VM"
   type        = string
-  default     = "debian-cloud/debian-11"
+  default     = "debian-cloud/debian-12"
 }
 
-variable "disk_size" {
-  description = "Disk size in GB"
-  type        = number
-  default     = 20
+variable "credentials_file" {
+  description = "Service Account JSON key file path"
+  type        = string
 }
 
 variable "startup_script" {
-  description = "Startup script for the VM"
+  description = "Startup script executed on VM boot"
   type        = string
-  default     = "echo Hello from Terraform VM > /var/www/html/index.html"
+  default     = "echo Hello from Terraform VM"
 }
