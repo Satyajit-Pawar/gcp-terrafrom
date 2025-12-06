@@ -1,6 +1,4 @@
 terraform {
-  required_version = ">= 1.5.0"
-
   required_providers {
     google = {
       source  = "hashicorp/google"
@@ -24,12 +22,14 @@ resource "google_compute_instance" "vm_instance" {
   boot_disk {
     initialize_params {
       image = var.image
+      size  = var.disk_size
     }
   }
 
   network_interface {
-    network       = "default"
-    access_config {} # Assigns public IP (remove if you want private only)
+    network = "default"
+
+    access_config {}
   }
 
   metadata_startup_script = var.startup_script
